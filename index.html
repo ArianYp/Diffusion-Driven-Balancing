@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <!-- Meta tags for social media banners, these should be filled in appropriatly as they are your "business card" -->
+  <!-- Replace the content tag with appropriate information -->
+  <meta name="description" content="Diffusion Driven Balancing">
+  <meta property="og:title" content="Diffusion Driven Balancing"/>
+  <meta property="og:description" content="Diffusion Driven Balancing"/>
+  <meta property="og:url" content="URL OF THE WEBSITE"/>
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X630-->
+  <meta property="og:image" content="static/image/your_banner_image.png" />
+  <meta property="og:image:width" content="1200"/>
+  <meta property="og:image:height" content="630"/>
+
+
+  <meta name="twitter:title" content="Diffusion Driven Balancing">
+  <meta name="twitter:description" content="ICCV 2025">
+  <!-- Path to banner image, should be in the path listed below. Optimal dimenssions are 1200X600-->
+  <meta name="twitter:image" content="static/images/your_twitter_banner_image.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Keywords for your paper to be indexed by-->
+  <meta name="keywords" content="KEYWORDS SHOULD BE PLACED HERE">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <title>Diffusion Driven Balancing to Address Spurious Correlation</title>
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+  rel="stylesheet">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://documentcloud.adobe.com/view-sdk/main.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script src="static/js/bulma-carousel.min.js"></script>
+  <script src="static/js/bulma-slider.min.js"></script>
+  <script src="static/js/index.js"></script>
+</head>
+<body>
+
+
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">Diffusion Driven Balancing</h1>
+            <div class="is-size-5 publication-authors">
+              <!-- Paper authors -->
+              <span class="author-block">
+                <a href="https://scholar.google.com/citations?user=7EtxHvgAAAAJ&hl=en" target="_blank">Aryan Yazdan Parast</a>,</span>
+                <span class="author-block">
+                  <a href="https://scholar.google.com/citations?user=LpJ-inAAAAAJ&hl=en" target="_blank">Basim Azam</a>,</span>
+                  <span class="author-block">
+                    <a href="https://scholar.google.com/citations?user=Xqmlj18AAAAJ&hl=en" target="_blank">Naveed Akhtar</a>
+                  </span>
+				  
+                  </div>
+
+                  <div class="is-size-5 publication-authors">
+                    <span class="author-block">The University of Melbourne<br>ICCV 2025</span>
+                   </div>
+
+
+                  <!-- Github link -->
+                  <span class="link-block">
+                    <a href="https://github.com/ArianYp/DDB" target="_blank"
+                    class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Code</span>
+                  </a>
+                </span>
+
+                <!-- ArXiv abstract Link -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2503.17226" target="_blank"
+                  class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+          Deep neural networks trained with Empirical Risk Minimization (ERM) perform well when both training and test data come from the same domain, but they often fail to generalize to out-of-distribution samples. In image classification, these models may rely on spurious correlations that often exist between labels and irrelevant features of images, making predictions unreliable when those features do not exist. We propose a Diffusion Driven Balancing (DDB) technique to generate training samples with text-to-image diffusion models for addressing the spurious correlation problem. First, we compute the best describing token for the visual features pertaining to the causal components of samples by a textual inversion mechanism. Then, leveraging a language segmentation method and a diffusion model, we generate new samples by combining the causal component with the elements from other classes. We also meticulously prune the generated samples based on the prediction probabilities and attribution scores of the ERM model to ensure their correct composition for our objective. Finally, we retrain the ERM model on our augmented dataset. This process reduces the model’s reliance on spurious correlations by learning from carefully crafted samples in which this correlation does not exist. Our experiments show that across different benchmarks, our technique achieves better worst-group accuracy than the existing state-of-the-art methods. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
+
+<!-- Image carousel -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"> Overview </h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <div style="text-align: left;">
+          <div class="content has-text-justified">
+          <img id="model" src="static/images/Figure1.png" alt="Overview" style="width: 100%; height: auto;">
+          
+            <p><b>Figure 1. Examples of generated images by the proposed approach. We perform high-quality automated modification to the majority group
+samples (top) to generate minority group samples (bottom) such that the alterations precisely occur to the causal features in a manner that
+resolves the spurious correlations. (a) For Waterbirds dataset, which contains majority samples of landbirds with land backgrounds
+and waterbirds with water backgrounds, our method generates new images with landbirds on water backgrounds and waterbirds on land
+backgrounds while retaining majority sample backgrounds. (b) For CelebA, where the majority consists of non-blond males and blond
+females, our approach generates images of blond males and non-blond females. (c) For the MetaShift dataset, where dogs and cats are
+correlated with specific objects in the background, our technique generates samples that break this correlation by swapping dogs and cats.</b></p>
+          
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <h2 class="title is-3"> Method</h2>
+      </div>
+    </div>
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+        <div style="text-align: left;">
+          <img id="model" src="static/images/Figure2.png" alt="Method" style="width: 100%; height: auto;">
+          
+            <p><b>Figure 2. An overview of DDB - Dog/Cat classes used for illustration. (a) First, the token C_dog is optimized by reconstructing samples from
+the Dog class using prompts that include the trainable C_dog. Then, for each batch in D_cat, masks M are generated using the LangSAM
+with the prompt Class Name = ‘animal’. These masks, along with the input images and a textual prompt, are fed into the inpainting model
+to generate new images. The token C_dog is incorporated to generate the causal features of the Dog class. (b) The generated samples are
+then passed through the ERM model and the integrated gradients (IG) module to compute relevant scores for filtering undesired generated
+images. Algorithm for this stage is detailed in Alg. 1. (c) The final set of generated samples is used to retrain the ERM model. </b></p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Qualitative samples</h2>
+      </div>
+    </div>
+  
+
+
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-five-fifths">
+   
+      <img id="carousel-image" src="static/images/Figure3.png" alt="Qualitative Sample" style="width: 100%; height: auto;">
+    
+    <div class="buttons is-centered mt-4">
+      <button class="button is-link" onclick="prevImage()">Previous</button>
+      <button class="button is-link" onclick="nextImage()">Next</button>
+    </div>
+    </div>
+    </div>
+  </div>
+
+
+
+
+  
+    
+</section>
+
+
+<!-- End image carousel -->
+
+
+
+
+
+
+
+
+
+<!-- Paper poster -->
+
+<!--End paper poster -->
+
+
+<!--BibTex citation -->
+  <section class="section" id="BibTeX">
+    <div class="container is-max-desktop content">
+      <h2 class="title">BibTeX</h2>
+      <pre><code>
+
+      </code></pre>
+    </div>
+</section>
+
+<!--End BibTex citation -->
+
+
+  <footer class="footer">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+
+          <p>
+            This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a> which was adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            <br> This website is licensed under a <a rel="license"  href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- Statcounter tracking code -->
+  
+<!-- You can add a tracker to track page visits by creating an account at statcounter.com -->
+
+    <!-- End of Statcounter Code -->
+  <script>
+  const images = [
+    "static/images/Figure3.png",
+    "static/images/Figure4.png",
+    "static/images/Figure5.png",
+    "static/images/Figure6.png",
+    "static/images/Figure7.png",
+    "static/images/Figure8.png"
+  ];
+  let currentIndex = 0;
+
+  function showImage(index) {
+    const img = document.getElementById("carousel-image");
+    img.src = images[index];
+  }
+
+  function prevImage() {
+    currentIndex = (currentIndex - 1 + images.length) % images.length;
+    showImage(currentIndex);
+  }
+
+  function nextImage() {
+    currentIndex = (currentIndex + 1) % images.length;
+    showImage(currentIndex);
+  }
+</script>
+
+  </body>
+  </html>
